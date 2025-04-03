@@ -1,0 +1,10 @@
+<div class="character-list">
+  <mat-card *ngFor="let character of characters" class="character-card">
+    <img mat-card-image [src]="character.image" alt="{{ character.name }}" />
+    <mat-card-title>{{ character.name }}</mat-card-title>
+    <mat-card-subtitle>House: {{ character.house || 'Unknown' }}</mat-card-subtitle>
+    <button mat-button color="primary" [routerLink]="['/character', character.id]">
+      View Details
+    </button>
+  </mat-card>
+</div>
